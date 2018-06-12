@@ -8,7 +8,8 @@ const cors = require('cors');
 
 var index = require('./routes/index');
 var accounts = require('./routes/accounts');
-var auth = require('./routes/auth')
+var auth = require('./routes/auth');
+var description = require('./routes/description');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(cors());
 app.use('/', index);
 app.use('/accounts', accounts);
 app.use('/auth', auth);
+app.use('/description', description)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
